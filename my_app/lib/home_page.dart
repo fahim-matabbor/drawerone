@@ -29,10 +29,13 @@ class HomePage extends StatelessWidget {
               ListTile(
                 leading: Icon(Icons.home),
                 title: Text(
-                  'Page 1',
-                  style: TextStyle(fontSize: 20),
+                  'H O M E',
                 ),
                 onTap: () {
+                  // pop drawer first
+                  Navigator.pop(context);
+
+                  // go to home page
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => FirstPage()));
                 },

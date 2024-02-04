@@ -13,6 +13,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.deepPurple[100],
       appBar: AppBar(
         backgroundColor: Colors.deepPurple[300],
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
       ),
       drawer: Drawer(
         child: Container(
@@ -21,15 +22,15 @@ class HomePage extends StatelessWidget {
             children: [
               DrawerHeader(
                 child: Center(
-                    child: Text(
-                  'L O G O',
-                  style: TextStyle(fontSize: 35),
+                    child: Icon(
+                  Icons.favorite,
+                  size: 48,
                 )),
               ),
               ListTile(
                 leading: Icon(Icons.home),
                 title: Text(
-                  'H O M E',
+                  'F I R S T P A G E',
                 ),
                 onTap: () {
                   // pop drawer first
@@ -41,10 +42,9 @@ class HomePage extends StatelessWidget {
                 },
               ),
               ListTile(
-                leading: Icon(Icons.home),
+                leading: Icon(Icons.settings),
                 title: Text(
-                  'Page 2',
-                  style: TextStyle(fontSize: 20),
+                  'S E C O N D P A G E',
                 ),
                 onTap: () {
                   Navigator.of(context).push(
